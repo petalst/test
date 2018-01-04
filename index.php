@@ -5,3 +5,11 @@
  * Date: 04/01/2018
  * Time: 21:03
  */
+
+class Index {
+
+
+    public function helloWorld() {
+        echo 'Hello World';
+    }
+}
