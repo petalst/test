@@ -12,4 +12,8 @@ class Index {
     public function helloWorld() {
         echo 'Hello World';
     }
+
+    private function rainbow() {
+        echo 'Look at all those colors';
+    }
 }
