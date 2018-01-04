@@ -11,8 +11,4 @@ class Home
     public function welcomeHome() {
         echo 'Welcome Home';
     }
-
-    public function goHome() {
-        echo "byebye";
-    }
 }
