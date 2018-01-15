@@ -44,6 +44,7 @@ class RoboFile extends \Robo\Tasks
             ->commit('adding everything')
             ->push('origin',$branch)
             ->tag($version)
+
             ->push('origin',$version)
             ->run();
     }
