@@ -19,7 +19,7 @@ class RoboFile extends \Robo\Tasks
     /**
      * @var string $github_uri Github uri
      */
-    var $github_uri = 'maksimer/maco';
+    var $github_uri = 'petalst/test';
 
 
 
@@ -43,8 +43,7 @@ class RoboFile extends \Robo\Tasks
             ->add('-A')
             ->commit('adding everything')
             ->push('origin',$branch)
-            ->tag($version)
-
+            ->tag($version, $version)
             ->push('origin',$version)
             ->run();
     }
@@ -73,6 +72,8 @@ class RoboFile extends \Robo\Tasks
         $this->taskGitHubRelease($version)
             ->uri($this->github_uri)
             ->tag($version)
+            ->name($version)
+            ->comittish('master')
             ->prerelease($prerelease)
             ->description($description)
             ->run();
